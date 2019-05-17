@@ -1,0 +1,15 @@
+{%extends "polls/base.html" %}
+
+{%block title%}
+    Questions
+{%endblock%}
+{%block main%}
+<H3>{{question.question}} <H3>
+
+    <H3>Answers:</H3>
+    {%for question in questions%}
+    <p>
+        <a href="{{question.id}}">{{question.question}}</a>
+    </p>
+    {%endfor%}
+{%endblock%}
